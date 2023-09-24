@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/citix
+    username: postgres
+    password: 1234
+  sql:
+    init:
+      mode: always
+
+  jpa:
+    generate-ddl: true
+    show-sql: false
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        enable_lazy_load_no_trans: true
+        format_sql: true
+        generate_statistics: false
+        jdbc:
+          time_zone: UTC
+    hibernate:
+      ddl-auto: none
+
+api:
+  version:
+    /api
